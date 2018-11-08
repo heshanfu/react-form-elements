@@ -6,11 +6,24 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
 >
   <label>
     My Label
-    <input
-      name="TextBox"
-      type="text"
-      value=""
+    <textarea
+      name="TextArea"
     />
+  </label>
+</div>
+`;
+
+exports[`TextBox component The Rendered HTML should support children 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Label
+    <textarea
+      name="TextArea"
+    >
+      This is my value
+    </textarea>
   </label>
 </div>
 `;
@@ -21,11 +34,11 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
 >
   <label>
     My Label
-    <input
-      name="TextBox"
-      type="text"
-      value="My Input Value"
-    />
+    <textarea
+      name="TextArea"
+    >
+      My Input Value
+    </textarea>
   </label>
 </div>
 `;
@@ -36,11 +49,11 @@ exports[`TextBox component handling input should update a value when changed 1`]
 >
   <label>
     My Label
-    <input
-      name="TextBox"
-      type="text"
-      value="Updated Value"
-    />
+    <textarea
+      name="TextArea"
+    >
+      Updated Value
+    </textarea>
   </label>
 </div>
 `;

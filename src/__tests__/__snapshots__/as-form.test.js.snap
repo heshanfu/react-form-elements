@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The form components as a form should render properly 1`] = `
+exports[`The form components as a form should render and change accordingly 1`] = `
 <div>
   <h1>
     React Form Elements
   </h1>
-  <form>
+  <form
+    name="testForm"
+  >
+     
     <div
       class="form-row_container"
     >
       <label>
         My Label
         <input
+          name="TextBox"
           type="text"
           value=""
         />
@@ -23,9 +27,8 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My Checkbox
         <input
-          checked=""
+          name="checkbox"
           type="checkbox"
-          value=""
         />
       </label>
     </div>
@@ -35,6 +38,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My Date
         <input
+          name="datetime"
           type="date"
           value=""
         />
@@ -63,6 +67,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         Telephone
         <input
+          name="TextBox"
           type="tel"
           value=""
         />
@@ -74,6 +79,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime"
           value=""
         />
@@ -85,6 +91,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My Month
         <input
+          name="datetime"
           type="month"
           value=""
         />
@@ -96,6 +103,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My Week
         <input
+          name="datetime"
           type="week"
           value=""
         />
@@ -107,6 +115,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime-local"
           value=""
         />
@@ -118,6 +127,7 @@ exports[`The form components as a form should render properly 1`] = `
       <label>
         My Time
         <input
+          name="datetime"
           type="time"
           value=""
         />
@@ -234,18 +244,22 @@ exports[`The form components as a form should render properly 1`] = `
 </div>
 `;
 
-exports[`The form components as a form should render properly 2`] = `
+exports[`The form components as a form should render and change accordingly 2`] = `
 <div>
   <h1>
     React Form Elements
   </h1>
-  <form>
+  <form
+    name="testForm"
+  >
+     
     <div
       class="form-row_container"
     >
       <label>
         My Label
         <input
+          name="TextBox"
           type="text"
           value="Changed Value"
         />
@@ -257,9 +271,8 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My Checkbox
         <input
-          checked=""
+          name="checkbox"
           type="checkbox"
-          value=""
         />
       </label>
     </div>
@@ -269,6 +282,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My Date
         <input
+          name="datetime"
           type="date"
           value=""
         />
@@ -297,6 +311,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         Telephone
         <input
+          name="TextBox"
           type="tel"
           value=""
         />
@@ -308,6 +323,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime"
           value=""
         />
@@ -319,6 +335,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My Month
         <input
+          name="datetime"
           type="month"
           value=""
         />
@@ -330,6 +347,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My Week
         <input
+          name="datetime"
           type="week"
           value=""
         />
@@ -341,6 +359,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime-local"
           value=""
         />
@@ -352,6 +371,7 @@ exports[`The form components as a form should render properly 2`] = `
       <label>
         My Time
         <input
+          name="datetime"
           type="time"
           value=""
         />
@@ -460,6 +480,7 @@ exports[`The form components as a form should render properly 2`] = `
         data-testid="telephone"
       >
         Telephone: 
+        
       </li>
     </ul>
   </div>

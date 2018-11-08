@@ -1,40 +1,46 @@
-import React, { Component } from 'react'
+import React, {
+  forwardRef,
+  useState,
+  useRef,
+  useImperativeMethods,
+} from 'react'
 import PropTypes from 'prop-types'
 
-export default class CheckBox extends Component {
-  constructor(props) {
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
-    this.state = {
-      checked: props.initialValue,
-    }
+const CheckBox = forwardRef(({ name, label, checked: isChecked }, ref) => {
+  const [value, setValue] = useState(isChecked)
+
+  const handleChange = e => {
+    setValue(e.target.checked)
   }
-  handleChange(event) {
-    this.setState({ checked: !this.state.checked })
-  }
-  getValue() {
-    return this.state ? this.state.checked : false
-  }
-  isValid() {
-    return true
-  }
-  render() {
-    const { label, initialValue, ...otherProps } = this.props
-    return (
-      <div className="form-row_container">
-        <label>
-          {label || ''}
-          <input
-            type="checkbox"
-            {...otherProps}
-            checked={this.state.checked}
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        </label>
-      </div>
-    )
-  }
+  const inputRef = useRef()
+  useImperativeMethods(ref, () => ({
+    getValue: () => inputRef.current.checked,
+  }))
+  return (
+    <div className="form-row_container">
+      <label>
+        {label || ''}
+        <input
+          ref={inputRef}
+          onChange={handleChange}
+          name={name}
+          type="checkbox"
+          checked={value}
+        />
+      </label>
+    </div>
+  )
+})
+CheckBox.propTypes = {
+  label: PropTypes.string,
+  name: PropTypes.string,
+  checked: PropTypes.bool,
 }
-CheckBox.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
-CheckBox.defaultProps = { label: 'label', initialValue: false }
+CheckBox.defaultProps = {
+  label: 'label',
+  name: 'checkbox',
+  checked: false,
+}
+CheckBox.displayName = 'ReactFormElements(CheckBox)'
+
+export default CheckBox
